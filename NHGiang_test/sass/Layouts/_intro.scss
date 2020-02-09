@@ -1,0 +1,17 @@
+.intro{
+    color: $colorWhite;
+    padding: $pd0 $pd0 $pd0 $pd0;
+    margin-top: 4rem;
+    outline: none;
+    h2{
+        @include styleTitles($fs3, $fw1, $lh2);
+    }
+    p{
+        @include styleTitles($fs2, $fw0, $lh1);
+        padding-top: $pd0 - 2;
+        border-top: 2px solid $colorWhite;
+        &:focus{
+            @include borderDooted ($colorWhite)
+        }
+    }
+}

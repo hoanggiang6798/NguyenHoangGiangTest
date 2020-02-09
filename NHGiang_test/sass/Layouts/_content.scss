@@ -1,0 +1,189 @@
+.content{
+    color: $colorWhite;
+    padding-top: $pd1;
+    padding-left: $pd0;
+    .content__title{
+        @include styleTitles($fs3, $fw1, $lh2);
+        margin: $mg0 0;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid $colorWhite;
+    }
+    .education{
+        margin-bottom: 3rem;
+        min-height: 15rem;
+        padding: 1rem 0 2rem 0;
+        &:hover{
+            background-color: white;
+            color: black;
+            .schoolName{
+                color: black;
+                @include borderDooted ($bgColorBlack);
+                
+            }
+            .educationTime__begin{
+                @include borderDooted ($bgColorBlack);
+            }
+            .educationTime__end{
+                @extend .educationTime__begin;
+            }
+
+            
+
+            
+        }
+        .schoolName__icon{
+            transform: rotate(45deg);
+            margin: 0 $mg0;
+            font-size: $fs4;
+            align-self: center;
+        }
+        .schoolName{
+            outline: none;
+            text-transform: uppercase;
+            color: $colorYellow;
+            @include styleTitles($fs0, $fw1, $lh3);
+        }
+        .educationTime{
+            padding-left: 2rem;
+            text-align: center;
+            .educationTime__begin{
+                @include styleTitles($fs2, $fw0, $lh1);
+            }
+            .educationTime__end{
+                @extend .educationTime__begin;
+            }
+            .lineGroup{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                width: 6rem;
+                padding: $pd3 0 $pd3 $pd1 + 5px;
+                &--start{
+                    max-width: .4rem;
+                    height: .4rem;
+                    border-radius: .2rem;
+                    background: $bgColorGray;
+                }
+                &--end{
+                    @extend .lineGroup--start;
+                }
+                &--period{
+                    flex-grow: 1;
+                    width: .2rem;
+                    margin: .1rem;
+                    background: $bgColorGray;
+                }
+            }
+        }
+        .educationInfor{
+            outline: none;
+            max-width: 22.7rem;
+            h2{
+                outline: none;
+                min-height: 2.2rem;
+                @include styleTitles($fs0, $fw1, $lh3);
+                text-transform: capitalize;
+                &:hover{
+                    @include borderDooted ($bgColorBlack);
+                }
+                
+            }
+            p{
+                @include styleTitles($fs2, $fw0, $lh1);
+                padding-bottom: .1rem;
+                &:hover{
+                    @include borderDooted ($bgColorBlack);
+                }
+                
+            }
+        }
+    }
+    .animationText{
+        text-align: center;
+        line-height: 15rem;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 8rem;
+        background-color: black;
+        color: white;
+        p{
+            font-size: 15px;
+            animation: rotate 0.5s infinite
+        }
+        animation: scale 1.5s infinite;
+    }
+    .skill__list{
+        min-height: 43rem;
+        .skill__item{
+            min-height: 4rem;
+            margin: $mg1 0;
+            padding: 2rem 0;
+            .skillName{
+                @include styleTitles($fs2, $fw0, $lh1);
+                min-width: 14rem;
+            }
+            .skillBar{
+                min-width: 18rem;
+                align-items: center;
+                .skillLevel{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border: 1px solid;
+                    border-radius: 1rem;
+                    margin-right: .1rem;
+                    cursor: pointer;
+                    transition: all .5s;
+                    &:hover{
+                        background-color: $colorYellow;
+                        color: $colorYellow;
+                    }                                      
+                }
+                .active{
+                    background-color: $colorYellow;
+                    color: $colorYellow;
+                }
+            }
+            &:hover{
+                color: $bgColorBlack;
+                background-color: $colorWhite;
+                .skillName{
+                    @include borderDooted ($bgColorBlack);
+                }
+                .skillLevel{
+                    border: 1px solid black;
+                    background-color: $colorBlack1;
+                }
+                .active{
+                    background-color: $colorYellow;
+                }
+            }
+        }
+    } 
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0);
+    }
+    25%{
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform: rotateZ(0);
+    }
+    75%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
