@@ -1,9 +1,0 @@
-@mixin styleTitles($fs, $fw, $lh) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
-}
-
-@mixin borderDooted ($color) {
-    border: 1px dotted $color;
-}
