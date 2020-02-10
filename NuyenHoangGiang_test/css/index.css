@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif; }
+
+a {
+  color: white; }
+  a:hover {
+    text-decoration: none;
+    color: white; }
+
+p {
+  padding: 0;
+  margin: 0;
+  outline: none; }
+
+.containerCv {
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-color: #373739;
+  padding: 2rem 2.5rem; }
+
+.headCv .header__avatar img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover; }
+.headCv .header__content {
+  position: relative;
+  padding-left: 10rem; }
+  .headCv .header__content .userName {
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 42.5px; }
+  .headCv .header__content .userTitle {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17.5px;
+    letter-spacing: .3rem;
+    margin: 10px 0;
+    padding-bottom: 1.5rem; }
+  .headCv .header__content p {
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17.5px; }
+    .headCv .header__content p i {
+      padding-right: 1rem; }
+  .headCv .header__content--bg .bg-1, .headCv .header__content--bg .bg-2, .headCv .header__content--bg .bg-3 {
+    position: absolute;
+    background-color: #0A555C;
+    top: -2rem;
+    right: -1rem;
+    width: 83.5rem;
+    height: 27.5rem;
+    clip-path: polygon(2% 0, 100% 0, 100% 91%, 14% 80%); }
+  .headCv .header__content--bg .bg-2 {
+    clip-path: polygon(2% 0, 100% 0, 100% 91%, 9% 89%);
+    opacity: 0.8; }
+  .headCv .header__content--bg .bg-3 {
+    clip-path: polygon(5% 0, 100% 0, 100% 91%, 17% 100%);
+    opacity: 0.2; }
+  .headCv .header__content--bg + div {
+    z-index: 100; }
+
+@media screen and (max-width: 1200px) {
+  .bg-1, .headCv .header__content--bg .bg-2, .headCv .header__content--bg .bg-3, .bg-2, .bg-3 {
+    max-width: 70rem; } }
+@media screen and (max-width: 992px) {
+  .headCv .header__avatar img {
+    width: 17rem;
+    height: 17rem; }
+  .headCv .header__content {
+    padding-left: 5rem; }
+    .headCv .header__content .bg-1, .headCv .header__content .header__content--bg .bg-2, .headCv .header__content--bg .header__content .bg-2, .headCv .header__content .header__content--bg .bg-3, .headCv .header__content--bg .header__content .bg-3, .headCv .header__content .bg-2, .headCv .header__content .bg-3 {
+      max-width: 55rem; } }
+@media screen and (max-width: 768px) {
+  .headCv .header__avatar {
+    margin-bottom: 1rem; }
+  .headCv .header__content {
+    padding: 1rem 2rem;
+    overflow: hidden; }
+    .headCv .header__content--bg .bg-1, .headCv .header__content--bg .bg-2, .headCv .header__content--bg .bg-3, .headCv .header__content--bg .bg-2, .headCv .header__content--bg .bg-3 {
+      clip-path: none; } }
+.intro {
+  color: #fff;
+  padding: 12px 12px 12px 12px;
+  margin-top: 4rem;
+  outline: none; }
+  .intro h2 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 27.5px; }
+  .intro p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17.5px;
+    padding-top: 10px;
+    border-top: 2px solid #fff; }
+    .intro p:focus {
+      border: 1px dotted #fff; }
+
+.content {
+  color: #fff;
+  padding-top: 20px;
+  padding-left: 12px; }
+  .content .content__title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 27.5px;
+    margin: 10px 0;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #fff; }
+  .content .education {
+    margin-bottom: 3rem;
+    min-height: 15rem;
+    padding: 1rem 0 2rem 0; }
+    .content .education:hover {
+      background-color: white;
+      color: black; }
+      .content .education:hover .schoolName {
+        color: black;
+        border: 1px dotted #000; }
+      .content .education:hover .educationTime__begin, .content .education:hover .educationTime__end {
+        border: 1px dotted #000; }
+    .content .education .schoolName__icon {
+      transform: rotate(45deg);
+      margin: 0 10px;
+      font-size: 8px;
+      align-self: center; }
+    .content .education .schoolName {
+      outline: none;
+      text-transform: uppercase;
+      color: #EBE2B3;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 20px; }
+    .content .education .educationTime {
+      padding-left: 2rem;
+      text-align: center; }
+      .content .education .educationTime .educationTime__begin, .content .education .educationTime .educationTime__end {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 17.5px; }
+      .content .education .educationTime .lineGroup {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 6rem;
+        padding: 5px 0 5px 25px; }
+        .content .education .educationTime .lineGroup--start, .content .education .educationTime .lineGroup--end {
+          max-width: .4rem;
+          height: .4rem;
+          border-radius: .2rem;
+          background: #d2e1e5; }
+        .content .education .educationTime .lineGroup--period {
+          flex-grow: 1;
+          width: .2rem;
+          margin: .1rem;
+          background: #d2e1e5; }
+    .content .education .educationInfor {
+      outline: none;
+      max-width: 22.7rem; }
+      .content .education .educationInfor h2 {
+        outline: none;
+        min-height: 2.2rem;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        text-transform: capitalize; }
+        .content .education .educationInfor h2:hover {
+          border: 1px dotted #000; }
+      .content .education .educationInfor p {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 17.5px;
+        padding-bottom: .1rem; }
+        .content .education .educationInfor p:hover {
+          border: 1px dotted #000; }
+  .content .animationText {
+    text-align: center;
+    line-height: 15rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 8rem;
+    background-color: black;
+    color: white;
+    animation: scale 1.5s infinite; }
+    .content .animationText p {
+      font-size: 15px;
+      animation: rotate 0.5s infinite; }
+  .content .skill__list {
+    min-height: 43rem; }
+    .content .skill__list .skill__item {
+      min-height: 4rem;
+      margin: 5px 0;
+      padding: 2rem 1rem; }
+      .content .skill__list .skill__item .skillName {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 17.5px;
+        max-width: 15rem; }
+      .content .skill__list .skill__item .skillBar {
+        min-width: 15rem;
+        align-items: center; }
+        .content .skill__list .skill__item .skillBar .skillLevel {
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 1px solid;
+          border-radius: 1rem;
+          margin-right: .1rem;
+          cursor: pointer;
+          transition: all .5s; }
+          .content .skill__list .skill__item .skillBar .skillLevel:hover {
+            background-color: #EBE2B3;
+            color: #EBE2B3; }
+        .content .skill__list .skill__item .skillBar .active {
+          background-color: #EBE2B3;
+          color: #EBE2B3; }
+      .content .skill__list .skill__item:hover {
+        color: #000;
+        background-color: #fff; }
+        .content .skill__list .skill__item:hover .skillName {
+          border: 1px dotted #000; }
+        .content .skill__list .skill__item:hover .skillLevel {
+          border: 1px solid black;
+          background-color: #373739; }
+        .content .skill__list .skill__item:hover .active {
+          background-color: #EBE2B3; }
+
+@keyframes scale {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0); }
+  25% {
+    transform: rotateZ(10deg); }
+  50% {
+    transform: rotateZ(0); }
+  75% {
+    transform: rotateZ(-10deg); }
+  100% {
+    transform: rotateZ(0); } }
+@media screen and (max-width: 992px) {
+  .content .content__title {
+    font-size: 18px; }
+  .content .education .schoolName {
+    font-size: 14px; }
+  .content .skill__list .skill__item .skillName {
+    padding: 0; }
+  .content .skill__list .skill__item .skillBar {
+    min-width: 12rem;
+    padding: 0; } }
+@media screen and (max-width: 768px) {
+  .content .education {
+    margin-bottom: 0; }
+    .content .education .educationTime .lineGroup {
+      padding-left: 50px; }
+    .content .education .educationInfor {
+      max-width: 100%; }
+  .content .animationText {
+    padding: 0 2rem;
+    width: 80%; } }
+@media screen and (max-width: 576px) {
+  .content .education {
+    width: 100%; }
+    .content .education .educationTime .lineGroup {
+      padding-left: 30px; } }
+
+/*# sourceMappingURL=index.css.map */
